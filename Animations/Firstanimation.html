@@ -1,0 +1,61 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+        .name {
+            font-size: 3rem;
+            margin: 30%;
+            text-align: center;
+            height: 100px;
+
+        }
+        .name{
+            transition: transform 3s ease-in-out;
+            transition-delay: .33s;
+            opacity: 0;
+        }
+
+        .name:hover {
+            color: bisque;
+            opacity: 1;
+            animation: animate3k 3s infinite;
+        }
+
+        @keyframes animate3k {
+            0%{
+                color: #0dff00;
+            }
+            30%{
+                color: #8200fb;
+            }
+            50%{
+            transform: rotate(1080deg) scale(2.33);
+                color: #fa4f00;
+            }
+            80%{
+                transform: rotateX(100deg);
+                color: #d10ebe;
+            }
+            100%{
+                color: #fb0000;
+            }
+
+   }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="name">TARUN3K</div>
+</body>
+
+</html>
