@@ -1,0 +1,105 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart</title>
+</head>
+<style>
+    body {
+	margin: 0;
+    background-color: black;
+}
+
+.container {
+    background-color:#000000;
+	height: 100vh;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+h1 {
+	font-size: 11em;
+ color:#ec0000;
+ animation: heartColor 2s infinite linear alternate;
+
+}
+
+@keyframes heartColor {
+    
+    from{
+        color: #da3232;
+        transform: scale(.33);
+    }
+    to{
+        color:#ec0000;
+        transform: scale(2);
+    }
+}
+
+
+.ring {
+	width: 600px;
+	height: 600px;
+	border-radius: 50%;
+	position: absolute;
+	background-color: transparent;
+	border: 15px #ff2222 solid;
+	animation: ani 10s infinite linear alternate;
+}
+
+@keyframes ani {
+	0% {
+		 transform: scale(0.001);
+		opacity: 0;
+	}
+	1% {
+		 transform: scale(0.001);
+      
+		opacity: 0.25;
+	}
+	95% {
+		 transform: scale(10);
+		opacity: 0.75;
+        
+	}
+	100% {
+		 transform: scale(10);
+		opacity: 0;
+	}
+}
+
+#r2 {
+	animation-delay: -2s;
+}
+#r3 {
+	 animation-delay: -4s;
+}
+#r4 {
+	 animation-delay: -6s;
+}
+#r5 {
+	 animation-delay: -8s;
+}
+#r6 {
+	 animation-delay: -10s;
+}
+
+</style>
+
+<body >
+
+    <div  class="container">
+        <h1 >💓</h1>
+        <div id="r1" class="ring"></div>
+        <div id="r2" class="ring"></div>
+        <div id="r3" class="ring"></div>
+        <div id="r4" class="ring"></div>
+        <div id="r5" class="ring"></div>
+        <div id="r6" class="ring"></div>
+    </div>
+    
+</body>
+
+</html>
